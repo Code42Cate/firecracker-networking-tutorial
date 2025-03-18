@@ -5,6 +5,7 @@ cd plugins
 bash build_linux.sh
 mkdir -p /opt/cni/bin
 sudo cp bin/* /opt/cni/bin/
+
 cd ..
 git clone https://github.com/awslabs/tc-redirect-tap
 cd tc-redirect-tap
@@ -17,6 +18,9 @@ tar -xzf firecracker-v1.11.0-x86_64.tgz
 cp release-v1.11.0-x86_64/firecracker-v1.11.0-x86_64 /usr/bin/firecracker
 
 rm -rf release-v1.11.0-x86_64 firecracker-v1.11.0-x86_64.tgz
+
+mkdir -p /etc/cni/conf.d
+cp fcnet.conflist /etc/cni/conf.d/fcnet.conflist
 
 ARCH="$(uname -m)"
 
