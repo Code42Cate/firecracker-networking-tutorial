@@ -21,3 +21,5 @@ echo "nameserver 1.1.1.1" > squashfs-root/etc/resolv.conf
 sudo chown -R root:root squashfs-root
 truncate -s 400M ubuntu-24.04.ext4
 sudo mkfs.ext4 -d squashfs-root -F ubuntu-24.04.ext4
+
+rm -rf squashfs-root ubuntu-24.04.squashfs.upstream
