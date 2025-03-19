@@ -1,4 +1,4 @@
-apt install -y go make
+apt install -y golang-go make
 
 git clone https://github.com/containernetworking/plugins
 cd plugins
