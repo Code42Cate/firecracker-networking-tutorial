@@ -1,3 +1,5 @@
 vmlinux-*
 ubuntu-*
 squashfs-root
+plugins
+tc-redirect-tap
