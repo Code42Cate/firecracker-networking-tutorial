@@ -65,11 +65,6 @@ setup_rootfs() {
     echo "Extracting squashfs..."
     unsquashfs ubuntu-24.04.squashfs.upstream
 
-    echo "Generating SSH key pair..."
-    ssh-keygen -f id_rsa -N "" -q
-    cp -v id_rsa.pub squashfs-root/root/.ssh/authorized_keys
-    mv -v id_rsa ./ubuntu-24.04.id_rsa
-
     echo "Configuring nameserver..."
     echo "nameserver 1.1.1.1" > squashfs-root/etc/resolv.conf
 
